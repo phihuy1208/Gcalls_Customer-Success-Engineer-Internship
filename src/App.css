@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: #673AB7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 900px;
+    border-radius: 10px;
+    padding: 40px 30px;
+    background: #fff;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.calling .button,
+.keyboard .number{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.keyboard .phone-number,
+.calling .phone-number {
+    grid-column: 1/ span 3;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 40px;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 3em;
+    user-select: none;
+}
+
+.calling .phone-number{
+    color: white;
+}
+
+
+.keyboard .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 26%;
+    height: 0;
+    padding: 13% 0;
+    margin-top: 20px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 400;
+}
+
+.keyboard .btn:active{
+    filter: brightness(0.8);
+}
+
+.keyboard .num i {
+    font-style: normal;
+    font-size: 1.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.keyboard .num p {
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.keyboard .btn.clear {
+    position: absolute;
+    width: 20%;
+    padding: 10% 0;
+    margin-top: 20px;
+    border-radius: 50%;
+    color: #333;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    right: 10px;
+    bottom: 30px;
+}
+.keyboard .btn.clear i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.5em;
+    transform: translate(-50%, -50%);
+    color: #333;
+}
+
+.keyboard .clear:active i{
+    filter: brightness(3.5);
+}
+
+.container .btn.phone {
+    position: absolute;
+    width: 20%;
+    padding: 10% 0;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35px;
+}
+
+.container .phone i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
+    color: #fff !important;
+}
+
+.container .phone.call {
+    background: #38C55C;
+}
+
+.container .phone.cancel {
+    background: #ff5a5a;
+}
+
+/* -------------------------------------- */
+
+.container.liner-gradient{
+    /* background: linear-gradient(, #61b7f0, #51ecf1); */
+    background: linear-gradient(217deg, rgba(173, 214, 106, 0.8), rgba(63, 221, 241, 0.8) 70.71%),
+                linear-gradient(336deg, rgba(243, 0, 203, 0.8), rgba(147, 168, 26, 0.8) 70.71%),
+                linear-gradient(127deg, rgba(37, 68, 243, 0.8), rgba(155, 31, 134, 0.8) 70.71%);
+
+}
+
+.calling .button{
+    position: absolute;
+    background-color: #ecebeb;
+    width: 80%;
+    height: 300px;
+    left: 50%;
+    border-radius: 20px;
+    bottom: 180px;
+    transform: translateX(-50%);
+}
+
+.calling .button{
+    justify-content: space-evenly;
+    align-items: center;
+}
+.calling .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 26%;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.calling .btn i {
+    font-size: 2em;
+    color: #000
+}
+
+.calling .btn:active{
+    background-color: rgba(156, 156, 156, 0.8);
+}
+
+.calling .status{
+    width: 100%;
+    text-align: center;
+    margin-top: -40px;
+    font-size: 1.5em;
+    color: #fff;
+    animation: show-hide 2s infinite;
+}
+
+.calling .btn.active i {
+    color:rgba(63, 221, 241, 0.8);
+}
+
+@keyframes show-hide{
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
